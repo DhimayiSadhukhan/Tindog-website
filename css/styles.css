@@ -1,0 +1,192 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  /*for montserrat rehular*/
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  /*for Montserrat-bold specify font weight*/
+}
+
+p {
+  color: #8f8f8f;
+}
+
+.container-fluid {
+  /*title section*/
+  padding: 7% 15%;
+  /*7% on top and bottom, 15% on left right*/
+}
+
+/*Sections*/
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/*Headings section*/
+.big-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  /*for Montserrat-black specify font weight*/
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Navigation bar */
+.navbar {
+  padding: 0 0 4.5rem;
+  /*give padding on bottom remove padding on top,left,right to align brand with rest of text*/
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+  /*to increase space between contact pricing download*/
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+/* Title section */
+#title .container-fluid {
+  /*for the container fluid inside title i.e. hierarchical selectors*/
+  padding: 3% 15% 6%;
+  text-align: left;
+}
+
+/* Download buttons */
+.download-button {
+  /*we created custom class to avoid messing with default btn bootstrap class*/
+  margin: 5% 3% 5% 0;
+}
+
+/* Title image */
+.title-image {
+  width: 60%;
+  /*60% of parent div i.e. class col-lg-6*/
+  transform: rotate(25deg);
+  /*z-index: -1;  cannot do this to make it go behind features section as rest of title has z-index 0 and hides phone completely*/
+  position: absolute;
+  /*without this z-index does not work*/
+  right: 30%;
+}
+
+/* Features Section*/
+#features {
+  /*entire features section*/
+  /*position: absolute; cannot do this as this takes element out of flow of html document and gives random position*/
+  position: relative;
+  z-index: 1;
+  /*to make it go on top, but works without this too*/
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 5%;
+}
+
+.icon {
+  /*custom class*/
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+
+/* Testimonial section */
+#testimonials {
+  background-color: #e97878;
+  /*although this is colored section we can override it by giving new bgcolor as id is most specific*/
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  border-radius: 100%;
+  /*to make it circle*/
+  width: 20%;
+  margin: 20px;
+}
+
+#press {
+  background-color: #e97878;
+  /*although this is colored section we can override it by giving new bgcolor as id is most specific*/
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px;
+}
+
+/*Pricing section*/
+#pricing {
+  padding: 100px;
+}
+
+.breed-title {
+  font-size: 1.5rem;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA section */
+/*#cta {
+  color: #fff;
+  background-color: #ff4c68; /*not needed, defined in colored section class
+}*/
+
+/* Footer section */
+.social-icon {
+  margin: 20px 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 1028px) {
+
+  /*when viewport is 1028px or less  e.g tab or mobile*/
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    /* so that no longer cut off*/
+    transform: rotate(0);
+    /*so that image is not rotated i.e. straight*/
+  }
+}
